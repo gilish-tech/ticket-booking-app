@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* index.css */
+* {
+  box-sizing: border-box;
+}
+
+
+.landing-wrapper {
+  /* display:table; */
+  /* width:100%; */
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.chalenejohnson.com/wp-content/uploads/2017/03/2015-03-14-SmartSuccess-02406.jpg');
+  /* background-position:center top; */
+  /* height:350px; */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
