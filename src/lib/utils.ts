@@ -2,17 +2,28 @@ import axios from "axios";
 import { EventType, EventsWithPagesType } from "../types";
 
 
+
 let allEventEndpoint = "https://rendezvous-events.onrender.com/events/" 
 const descriptionEndpoint = "https://rendezvous-events.onrender.com/events/" 
+
+
+export const getUniqueCategories = (events: EventType[]): string[] => {
+  const categories = events.map(event => event.category);
+  return [...new Set(categories)]; // Use Set to get unique categories
+};
+
+
 
 export const getAllEvents = async(category:string,page:number)=>{
 
 try {
       let reqEndpoint = ""
       let mapKey = "allEvents"
+      let isAllCat  = false
       if(page && page > 0){
          
          reqEndpoint = `${allEventEndpoint}?page=${page}`  
+         isAllCat = true
          
       }
       else if (category){
@@ -26,8 +37,8 @@ try {
       }
         const response = await axios.get(reqEndpoint);
 
-        console.log(response.data)
-        const fullData: EventsWithPagesType =  {data:response.data["data"][mapKey], NumberOfPages: response.data.data?.noOfPages };
+        console.log(getUniqueCategories(response.data["data"][mapKey]))
+        const fullData: EventsWithPagesType =  {data:response.data["data"][mapKey], NumberOfPages: response.data.data?.noOfPages,isAllCat };
         return fullData
       
 

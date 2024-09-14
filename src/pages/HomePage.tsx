@@ -6,16 +6,17 @@ import { LuArrowUpRight } from "react-icons/lu";
 import EventCard from '../components/HomePage/EventCard';
 import { useSearchParams } from "react-router-dom";
 import {useState} from "react"
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate,Link } from 'react-router-dom';
+import { useOptionStore } from '../store/optionsStore';
 // import './App.css'
 
 import DisplayAllEvent from '../components/HomePage/DisplayAllEvent';
 
 
-const CATEGORIES = ["All","Comedy","Religious","tech","health","fitness","sport","education"]
+
 
 function HomePage() {
+    const data = useOptionStore((state)=>state.data);
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const selectedCategory = searchParams.get("category");
@@ -61,8 +62,9 @@ function HomePage() {
                         <select value={selectedOption}  id="countries" className="bg-gray-50 border outline-none text-gray-900 p-2 text-xs rounded-lg  block w-max"
                            onChange={handleSelectChange}>
                             <option >Categroies</option>
+                            <option >lalal</option>
                              {
-                                CATEGORIES.map((category,index)=>(
+                                data?.map((category,index)=>(
                                     <>
                                         <option key={index} value={category}>{category}</option>
                                     
@@ -85,10 +87,10 @@ function HomePage() {
 
           <div className="flex flex-col  md:p-[50px] gap-4 ">
               <section className='flex flex-col w-full p-1'>
-                  <div className="flex justify-between ">
+                  <div className="flex justify-between items-center ">
                       <h1 className='text-xl font-semibold'>Trending events</h1>
                       <div className="flex gap-1 items-center justify-center text-purple-800">
-                          <p className='text-sm font-semibold '>view all trending events</p>
+                          <Link to={"/"} className='text-sm font-semibold '>view all trending events</Link>
                           < LuArrowUpRight className='text-sm' />
                       </div>
                   </div>

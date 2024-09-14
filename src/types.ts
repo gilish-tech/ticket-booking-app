@@ -24,6 +24,6 @@ export type EventType = {
   
 
 
-export  type EventsWithPagesType = {data:EventType[],NumberOfPages:string} 
+export  type EventsWithPagesType = {data:EventType[],NumberOfPages:string,isAllCat:boolean} 
 
   
