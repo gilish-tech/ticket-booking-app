@@ -43,14 +43,14 @@ function HomePage() {
           p-1 md:p-[50px]">
               <Navbar/>
 
-            <div className="flex flex-col md:flex-row items-center justify-between gap-5   relative top-[30%] md:top-[50%]">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-5   relative top-[20%] lg:top-[50%]">
                 <div className="w-full md:w-1/2 flex justify-center md:justify-start ">
-                  <h3 className="text-xl text-center  text-white text-wrap w-1/2 md:w-[300px] font-semibold">
+                  <h3 className="text-xl md:text-2xl text-center  text-white text-wrap w-1/2 md:w-[300px] font-semibold">
                         Ready to Rock? Discover the hottest Events Here - YOur Calender's New Best Friend!
                   </h3>
                 </div>
 
-                 <div className="flex  bg-white p-2 w-full md:w-max gap-5 rounded-lg">
+                 <div className="flex items-center  bg-white px-3 py-4  w-max  gap-3 md:gap-5 rounded-lg">
                      <div className="flex items-center gap-2 ">
                           <CiSearch className='text-base'/>
                           <input className='outline-none text-[15px] ' placeholder='Search for an event' value={inputValue}
@@ -59,10 +59,10 @@ function HomePage() {
                       </div>
                       <div className="flex items-center justify-center gap-2">
                       <span className="font-thin text-gray-300">|</span>
-                        <select value={selectedOption}  id="countries" className="bg-gray-50 border outline-none text-gray-900 p-2 text-xs rounded-lg  block w-max"
+                        <select value={selectedOption}  id="countries" className="bg-gray-50 border outline-none text-gray-900 p-2 text-[15px] rounded-lg  block w-max"
                            onChange={handleSelectChange}>
                             <option >Categroies</option>
-                            <option >lalal</option>
+            
                              {
                                 data?.map((category,index)=>(
                                     <>
