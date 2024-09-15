@@ -2,11 +2,11 @@ import { LuArrowUpRight } from "react-icons/lu";
 import { formatDate } from "../../lib/utils";
 import {Link} from "react-router-dom"
 type TrendingEventsCardProps = {
-    image?:string,
-    title?:string,
-    date?:string
-    description?:string
-    time?:string
+    image:string,
+    title:string,
+    date:string
+    description:string
+    time:string
     id:string
 
 }
