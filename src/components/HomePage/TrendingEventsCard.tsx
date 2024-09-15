@@ -19,7 +19,7 @@ const TrendingEventsCard = ({image,date,title,description,time,id}:TrendingEvent
             <div className="px-6 py-4">
                 <div className="font-semibold mb-1">
                     <h3 className="text-[16px] md:text-[18px] ">{title}Sunset</h3>
-                    <p className="text-[14px] md:text-[16px] font-normal">{`${formatDate(date!!)} - ${time}`}</p>
+                    <p className="text-[14px] md:text-[14px] font-normal">{`${formatDate(date!!)} - ${time}`}</p>
                 </div>
 
                 <div className="flex flex-col gap-2">

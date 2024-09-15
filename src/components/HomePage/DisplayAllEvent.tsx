@@ -11,8 +11,15 @@ import { useOptionStore } from '../../store/optionsStore';
 const NextButton = ({page,children,onClick,color}:{page:Number,children:React.ReactNode,onClick?:()=>void,color?:string})=>{
 
   return (
-     <Link to={`/?page=${page}`} className={` flex items-center justify-center size-[40px] shadow-md mb-2 f  ${color ? color : "bg-purple-300"} text-sm `} onClick={onClick}>{children}</Link>
-  )
+    <Link
+      to={`/?page=${page}`}
+      className={`flex items-center justify-center w-10 h-10 shadow-md mb-2 rounded-full ${color} text-sm transition-all duration-200 hover:bg-purple-400 focus:ring-2 focus:ring-purple-500 focus:outline-none`}
+      onClick={onClick}
+      aria-label={`Go to page ${page}`}
+    >
+      {children}
+    </Link>
+  );
 }
 
 const DisplayAllEvent = ({filterVal}:{filterVal:string}) => {
