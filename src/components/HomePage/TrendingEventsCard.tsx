@@ -18,12 +18,12 @@ const TrendingEventsCard = ({image,date,title,description,time,id}:TrendingEvent
             <img loading="lazy" className="w-full max-h-[200px] rounded-md"  src={image} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
                 <div className="font-semibold mb-1">
-                    <h3 className="text-[16px] md:text-[18px] ">{title}Sunset</h3>
-                    <p className="text-[14px] md:text-[14px] font-normal">{`${formatDate(date!!)} - ${time}`}</p>
+                    <h3 className="text-lg md:text-xl text-gray-800">{title}</h3>
+                    <p className="text-sm md:text-base text-gray-600">{`${formatDate(date!!)} - ${time}`}</p>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <p className="text-gray-700 text-sm md:text-base">
+                    <p className="text-gray-700 text-sm md:text-base mb-4">
                         {description?.substring(0,100)}.
                     </p>
                     <div className="flex gap-1 items-center justify-start text-purple-800">
