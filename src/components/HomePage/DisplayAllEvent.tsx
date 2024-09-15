@@ -11,7 +11,7 @@ import { useOptionStore } from '../../store/optionsStore';
 const NextButton = ({page,children,onClick,color}:{page:Number,children:React.ReactNode,onClick?:()=>void,color?:string})=>{
 
   return (
-     <Link to={`/?page=${page}`} className={` flex items-center justify-center size-[40px] shadown-md f  ${color ? color : "bg-purple-300"} text-sm `} onClick={onClick}>{children}</Link>
+     <Link to={`/?page=${page}`} className={` flex items-center justify-center size-[40px] shadow-md mb-2 f  ${color ? color : "bg-purple-300"} text-sm `} onClick={onClick}>{children}</Link>
   )
 }
 

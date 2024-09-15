@@ -87,11 +87,11 @@ function HomePage() {
 
           <div className="flex flex-col  md:p-[50px] gap-4 ">
               <section className='flex flex-col w-full p-1'>
-                  <div className="flex justify-between items-center ">
-                      <h1 className='text-xl font-semibold'>Trending events</h1>
-                      <div className="flex gap-1 items-center justify-center text-purple-800">
-                          <Link to={"/"} className='text-sm font-semibold '>view all trending events</Link>
-                          < LuArrowUpRight className='text-sm' />
+                  <div className="flex justify-between items-center px-4">
+                      <h1 className='text-[23px] mb-3 font-semibold'>Trending events</h1>
+                      <div className="flex gap-1 items-center justify-center text-purple-800 text-base">
+                          <Link to={"/"} className=' font-semibold '>view all trending events</Link>
+                          < LuArrowUpRight />
                       </div>
                   </div>
                     
