@@ -90,9 +90,9 @@ function HomePage() {
 
       <div className="flex flex-col  md:p-[50px] gap-4 ">
         <section className="flex flex-col w-full p-1">
-          <div className="flex justify-between items-center px-4">
+          <div className="flex md:justify-between items-center px-4 gap-14 md:gap-36">
             <h1 className="text-[23px] mb-3 font-semibold">Trending events</h1>
-            <div className="flex gap-1 items-center justify-center text-purple-800 text-base">
+            <div className="flex gap-1 items-center justify-center text-purple-800 text-[18px]">
               <Link to={"/"} className=" font-semibold ">
                 view all trending events
               </Link>

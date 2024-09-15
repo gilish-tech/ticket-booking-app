@@ -87,7 +87,7 @@ const DisplayAllEvent = ({filterVal}:{filterVal:string}) => {
                 { 
                   Number(data?.NumberOfPages) > 1 &&
                   [...Array(+data?.NumberOfPages!)].map((_,index)=>(
-                      <NextButton page={index + 1} color={index + 1  === currentPage ? "bg-purple-900" : ""} onClick={()=>setCurrentPage(index + 1)}  >{index + 1}</NextButton>
+                      <NextButton page={index + 1} color={index + 1  === currentPage ? "bg-purple-900 text-white" : ""} onClick={()=>setCurrentPage(index + 1)}  >{index + 1}</NextButton>
                     
                   ))
                 }
