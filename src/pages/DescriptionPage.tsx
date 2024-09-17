@@ -33,7 +33,7 @@ const DescriptionPage = () => {
  
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen antialiased'>
        <div className="px-1 md:px-24 py-12 md:py-12 ">
 
         <Navbar/>
@@ -49,12 +49,12 @@ const DescriptionPage = () => {
                       <div className="flex">
                         <div className="flex gap-3">
                             <div className="flex  items-center gap-2">
-                                  <SlCalender className='text-purple-800 text-sm'/>
-                                  <p className='text-xm text-gray-700 text-sm'>{formatDate(data?.date||"")}</p>
+                                  <SlCalender className='text-purple-800 text-[15px]'/>
+                                  <p className='text-xm text-gray-700 text-[15px]'>{formatDate(data?.date||"")}</p>
                             </div>
                             <div className="flex  items-center gap-2">
-                                  <IoMdTime className='text-purple-800 text-sm'/>
-                                  <p className='text-gray-700 text-sm'>{data?.time}</p>
+                                  <IoMdTime className='text-purple-800 text-[15px]'/>
+                                  <p className='text-gray-700 text-[15px]'>{data?.time}</p>
                             </div>
                             <div className="flex"></div>
 
@@ -100,7 +100,7 @@ const DescriptionPage = () => {
                   <div className="flex flex-col gap-7 w-full md:w-3/5 ">
                     <div className="flex flex-col md:pr-8 ">
                         <h1 className='text-xl font-semibold text-center md:text-left'>Event Description</h1>
-                        <p className='text-gray-700 text-sm text-center md:text-left w-full'>
+                        <p className='text-gray-700 text-[15px] text-center md:text-left w-full leading-8'>
                           {data?.description}
                         </p>
                       
@@ -109,20 +109,20 @@ const DescriptionPage = () => {
                     <div className="flex flex-col gap-2">
 
                     <h1 className='text-xl font-semibold text-center md:text-left'>Total Pricing</h1>
-                    <div className="flex gap-3 justify-center md:justify-start">
-                      <div className="flex-col">
+                    <div className="flex gap-5 justify-center md:justify-start">
+                      <div className="flex-col space-y-2">
                          <h3 className='font-medium text-lg  text-center md:text-left'>Single</h3>
                          <h3 className='text-[16px] text-purple-800 font-normal md:text-left'>{data?.price === 0 ? "FREE" : `NGN ${data?.price}` }</h3>
                       </div>
                      
-                      <div className="flex-col">
+                      <div className="flex-col space-y-2">
                          <h3 className='font-medium text-lg text-center'>Pair</h3>
                          <h3 className='text-[16px] text-purple-800 font-normal'>NGN 9,000</h3>
                       </div>
                                           
 
                     </div>
-                    <div className="flex  justify-center md:justify-start">
+                    <div className="flex  justify-center md:justify-start mt-2">
                     <Button text='Buy Now'/>
                     </div>
                     </div>

@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 
+/* @layer base{
+  @apply antialiased
+} */
+
 /* index.css */
 * {
   box-sizing: border-box;

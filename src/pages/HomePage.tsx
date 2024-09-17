@@ -33,7 +33,7 @@ function HomePage() {
   };
 
   return (
-    <div className="text-4xl   w-screen overflow-hidden ">
+    <div className="text-4xl   w-screen overflow-hidden antialiased">
       <section
         className="landing-wrapper relative h-[400px] bg-opacity-50  bg-cover bg-center  w-full
           p-1 md:p-[50px]"
